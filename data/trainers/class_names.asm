@@ -29,7 +29,7 @@ TrainerClassNames::
 	db "Rival@"            ; RIVAL2
 	db "<PK><MN> Trainer@" ; LYRA1
 	db "<PK><MN> Trainer@" ; LYRA2
-	db "Youngster@"        ; YOUNGSTER
+	db "Elder@"            ; YOUNGSTER
 	db "Bug Catcher@"      ; BUG_CATCHER
 	db "Camper@"           ; CAMPER
 	db "Picnicker@"        ; PICNICKER
@@ -66,7 +66,7 @@ TrainerClassNames::
 	db "Gentleman@"        ; GENTLEMAN
 	db "Rich Boy@"         ; RICH_BOY
 	db "Lady@"             ; LADY
-	db "Breeder@"          ; BREEDER
+	db "Sans@"                 ; BREEDER/SANS
 	db "Baker@"            ; BAKER
 	db "Cowgirl@"          ; COWGIRL
 	db "Sailor@"           ; SAILOR

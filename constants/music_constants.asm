@@ -183,6 +183,15 @@
 	const MUSIC_TRAINER_BATTLE_PRISM           ; b5 ; unused
 	const MUSIC_GYM_LEADER_BATTLE_PRISM        ; b6 ; unused
 	const MUSIC_PALETTE_BATTLE_PRISM           ; b7 ; unused
+	const MUSIC_BOOK_OF_MORMON_STORIES         ; b8
+	const MUSIC_BRING_HIS_TRUTH                ; b9
+	const MUSIC_MISSIONARY_BATTLE              ; ba
+	const MUSIC_UNTRAVELED_ROAD                ; bb
+	const MUSIC_GHOSTBUSTERS                   ; bc
+	const MUSIC_HIE_TO_KOLOB                   ; bd
+	const MUSIC_WE_ARE_NUMBER_ONE              ; be
+	const MUSIC_MAGIC                          ; bf
+	const MUSIC_FINAL_DESTINY                  ; c0
 NUM_SONGS EQU const_value
 
 ; special

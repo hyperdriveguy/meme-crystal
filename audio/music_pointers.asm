@@ -183,3 +183,12 @@ Music:
 	dba Music_TrainerBattlePrism
 	dba Music_GymLeaderBattlePrism
 	dba Music_PaletteBattlePrism
+	dba Music_SevenNationArmy
+	dba Music_BookOfMormonStories
+	dba Music_MissionaryBattle
+	dba Music_UntraveledRoad
+	dba Music_Ghostbusters
+	dba Music_Kolob
+	dba Music_SweetChildOfMine
+	dba Music_Magic
+	dba Music_FinalDestiny

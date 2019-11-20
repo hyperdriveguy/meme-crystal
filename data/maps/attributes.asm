@@ -855,6 +855,7 @@ ENDM
 	map_attributes SilphCo1F, SILPH_CO_1F, $0, 0
 	map_attributes SilphCo2F, SILPH_CO_2F, $0, 0
 	map_attributes SilphCo3F, SILPH_CO_3F, $0, 0
+	map_attributes SaffronStakeCenter, SAFFRON_STAKE_CENTER, $0, 0
 	map_attributes CopycatsHouse1F, COPYCATS_HOUSE_1F, $0, 0
 	map_attributes CopycatsHouse2F, COPYCATS_HOUSE_2F, $0, 0
 	map_attributes Route5UndergroundEntrance, ROUTE_5_UNDERGROUND_ENTRANCE, $0, 0

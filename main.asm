@@ -4075,11 +4075,15 @@ INCLUDE "gfx/items.asm"
 
 SECTION "Introduction", ROMX
 
-INCLUDE "engine/options_menu.asm"
 INCLUDE "engine/crystal_intro.asm"
 
 CopyrightGFX:: ; e4000
 INCBIN "gfx/splash/copyright.2bpp"
+
+
+SECTION "Options", ROMX
+
+INCLUDE "engine/options_menu.asm"
 
 
 SECTION "Title Screen", ROMX

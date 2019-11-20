@@ -1,8 +1,8 @@
-NAME := polishedcrystal
-VERSION := 3.0.0-beta
+NAME := memecrystal
+VERSION := 1
 
-TITLE := PKPCRYSTAL
-MCODE := PKPC
+TITLE := MEMECRYS
+MCODE := YEET
 ROMVERSION := 0x30
 
 FILLER = 0x00
@@ -46,7 +46,7 @@ roms_md5      = roms.md5
 bank_ends_txt = contents/bank_ends.txt
 sorted_sym    = contents/$(NAME).sym
 
-PYTHON = python
+PYTHON = python2
 CC     = gcc
 RM     = rm -f
 GFX    = $(PYTHON) gfx.py

@@ -347,6 +347,18 @@ SECTION "Movie 2000 Music", ROMX
 INCLUDE "audio/music/m02/lugiassong.asm"
 
 
+SECTION "LDS Hymnal Music", ROMX
+
+INCLUDE "audio/music/lds/bookofmormonstories.asm"
+INCLUDE "audio/music/lds/sevennation.asm"
+INCLUDE "audio/music/lds/missionarybattle.asm"
+INCLUDE "audio/music/lds/untraveledroad.asm"
+INCLUDE "audio/music/lds/ghostbusters.asm"
+INCLUDE "audio/music/lds/hietokolob.asm"
+INCLUDE "audio/music/lds/sweetchildofmine.asm"
+INCLUDE "audio/music/lds/magic.asm"
+INCLUDE "audio/music/lds/finaldestiny.asm"
+
 SECTION "Sound Effects", ROMX
 
 INCLUDE "audio/sfx.asm"

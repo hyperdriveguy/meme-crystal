@@ -36,7 +36,7 @@ AzaleaTown_MapScriptHeader:
 	object_event 15, 13, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 0, -1, -1, PAL_NPC_BLUE, PERSONTYPE_COMMAND, jumptextfaceplayer, AzaleaTownTeacherText, -1
 	object_event  7,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, PERSONTYPE_COMMAND, jumptextfaceplayer, AzaleaTownYoungsterText, -1
 	object_event 31,  9, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_COMMAND, jumptextfaceplayer, AzaleaTownRocket1Text, EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
-	object_event 10, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_COMMAND, jumptextfaceplayer, AzaleaTownRocket2Text, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event 10, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, EarlyFlyRocketScript, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event  8, 17, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
 	object_event 18,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
 	object_event 29,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
@@ -343,14 +343,46 @@ AzaleaTownRocket1Text:
 	line "Samaritan?"
 	done
 
-AzaleaTownRocket2Text:
-	text "Do you know about"
-	line "SlowpokeTail? I"
-	cont "heard it's tasty!"
+AzaleaTownRocket2Text1:
+	text "I'm going to pawn"
+	line "something off on"
+	cont "you."
 
-	para "Aren't you glad I"
-	line "told you that?"
+	para "<PLAYER> got the"
+	line "stolen #mon and"
+	cont "League Badge!"
 	done
+
+AzaleaTownRocket2Text2:
+	text "Scram!"
+	done
+
+EarlyFlyRocketScript:
+	faceplayer
+	checkflag ENGINE_STORMBADGE
+	iftrue .scram
+	checkcode VAR_PARTYCOUNT
+	ifnotequal PARTY_LENGTH - 1 , .scram
+	showtext AzaleaTownRocket2Text1
+	cry MAGIKARP
+	setflag ENGINE_STORMBADGE
+	givepoke MAGIKARP, 20
+	callasm TeachStolenMagikarpFly
+.scram
+	showtext AzaleaTownRocket2Text2
+	end
+
+TeachStolenMagikarpFly:
+	ld hl, PartyMon6Moves
+	ld a, FLY
+	ld [hli], a
+	ld a, HYPER_BEAM
+	ld [hli], a
+	ld a, HURRICANE
+	ld [hli], a
+	ld a, BLIZZARD
+	ld [hl], a
+	ret
 
 AzaleaTownSlowpokeScript:
 	opentext

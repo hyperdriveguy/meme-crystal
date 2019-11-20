@@ -720,6 +720,7 @@ INCLUDE "maps/CopycatsHouse1F.asm"
 INCLUDE "maps/CopycatsHouse2F.asm"
 INCLUDE "maps/MrPsychicsHouse.asm"
 INCLUDE "maps/Underground.asm"
+INCLUDE "maps/SaffronStakeCenter.asm"
 
 
 SECTION "Silph Co Scripts", ROMX

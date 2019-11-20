@@ -28,7 +28,7 @@ Route34_MapScriptHeader:
 	object_event 10, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAYCARE_MAN_ON_ROUTE_34
 	object_event  8, 12, SPRITE_GOLDENROD_LYRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_34
 	object_event 13,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_TRAINER, 5, TrainerCamperTodd1, -1
-	object_event 15, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_TRAINER, 3, TrainerBreederJulie, -1
+	object_event 15, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, PERSONTYPE_TRAINER, 3, TrainerBreederJulie, -1
 	object_event 10, 26, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_TRAINER, 3, TrainerPicnickerGina1, -1
 	object_event  6, 10, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, PERSONTYPE_SCRIPT, 0, OfficerfMaraScript, -1
 	object_event 18, 28, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_GENERICTRAINER, 3, GenericTrainerPokefanmBrandon, -1
@@ -686,26 +686,22 @@ Route34LyraFollowMeText:
 	done
 
 BreederJulieSeenText:
-	text "This is where I"
-	line "train my baby"
-	cont "#mon!"
+	text "Do you wanna have"
+	line "a bad time?"
 	done
 
 BreederJulieBeatenText:
-	text "Beaten by a"
-	line "passing stranger!"
+	text "Huh. Always won-"
+	line "dered why people"
+
+	para "never use their"
+	line "strongest attack"
+	cont "first."
 	done
 
 BreederJulieAfterText:
-	text "One of my #mon"
-	line "has an Adamant"
-
-	para "nature. Another"
-	line "has a Lax nature."
-
-	para "It seems to make"
-	line "a difference in"
-	cont "battle."
+	text "Guess that's it,"
+	line "huh?"
 	done
 
 CamperTodd1SeenText:

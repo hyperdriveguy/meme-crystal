@@ -1706,7 +1706,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Joey@"
+	db "Johnson@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY
 	; party
 	db 5, RATTATA, ORAN_BERRY, 16, FAKE_PERFECT_DVS, ABILITY_2 | ADAMANT, MALE
@@ -1715,7 +1715,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Joey@"
+	db "Johnson@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY
 	; party
 	db 15, RATTATA, ORAN_BERRY, 48, FAKE_PERFECT_DVS, ABILITY_2 | ADAMANT, MALE
@@ -1724,7 +1724,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Joey@"
+	db "Johnson@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
 	db 25, RATICATE, ORAN_BERRY, 80, FAKE_PERFECT_DVS, ABILITY_2 | ADAMANT, MALE
@@ -1734,7 +1734,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Joey@"
+	db "Johnson@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
 	db 30, RATICATE, SITRUS_BERRY, 112, FAKE_PERFECT_DVS, ABILITY_2 | ADAMANT, MALE
@@ -1744,7 +1744,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Joey@"
+	db "Johnson@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
 	db 40, RATICATE, SITRUS_BERRY, 160, FAKE_PERFECT_DVS, ABILITY_2 | ADAMANT, MALE
@@ -1754,7 +1754,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Mikey@"
+	db "Crockett@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 2, RATTATA
@@ -1764,7 +1764,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Albert@"
+	db "Sullivan@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 6, RATTATA
@@ -1793,18 +1793,18 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Jimmy@"
+	db "Bush@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, RATICATE
+	db 99, MAGIKARP
 	db 60, ARBOK
-	db 60, PARASECT
+	db 60, GENGAR
 	db -1 ; end
 
 ; ================
 
 	; YOUNGSTER
-	db "Owen@"
+	db "Owens@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 53, GROWLITHE
@@ -1814,7 +1814,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Jason@"
+	db "Cason@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 55, SANDSLASH
@@ -1824,7 +1824,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Josh@"
+	db "Eberhard@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 60, RATICATE
@@ -1845,7 +1845,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Alfie@"
+	db "Olan@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 54, SANDSLASH
@@ -1855,7 +1855,7 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Oliver@"
+	db "Sasafraz@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 54, GOLBAT
@@ -1875,12 +1875,21 @@ YoungsterGroup:
 ; ================
 
 	; YOUNGSTER
-	db "Tyler@"
+	db "Gonzales@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 58, WEEPINBELL
 	db 59, QUAGSIRE
 	db 58, SANDSLASH
+	db -1 ; end
+
+; ================
+
+	; YOUNGSTER
+	db "Ricks@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME
+	; party
+	db 3,  SPINARAK, LEFTOVERS, "Spidey@"
 	db -1 ; end
 
 ; ================
@@ -7139,13 +7148,16 @@ BreederGroup:
 ; ================================
 ; ================
 
-	; BREEDER
-	db "Julie@"
-	db TRAINERTYPE_ITEM
+	; SANS
+	db "@"
+	db TRAINERTYPE_MOVES
 	; party
-	db 7, PICHU, EVIOLITE
-	db 10, DITTO, METAL_POWDER
-	db 8, TOGEPI, EVIOLITE
+	db 5, KABUTOPS
+		db HYPER_BEAM, BONEMERANG, HEX, PIN_MISSILE
+	db 10, KABUTOPS
+		db HYPER_BEAM, BONEMERANG, HEX, PIN_MISSILE
+	db 15, KABUTOPS
+		db HYPER_BEAM, BONEMERANG, DISABLE, PIN_MISSILE
 	db -1 ; end
 
 ; ================

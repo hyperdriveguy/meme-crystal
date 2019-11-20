@@ -120,6 +120,7 @@ KRIS EQU __enum__
 	const OLIVER
 	const CHAZ
 	const TYLER
+	const RICKS
 
 	trainerclass BUG_CATCHER ; 20
 	const WADE1

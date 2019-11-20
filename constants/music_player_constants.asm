@@ -39,6 +39,8 @@ NUM_MP_EDIT_FIELDS EQU const_value
 	const ORIGIN_GO      ; 0e
 	const ORIGIN_M02     ; 0f
 	const ORIGIN_PRISM   ; 10
+	const ORIGIN_LDS     ; 11
+	const ORIGIN_EB      ; 12
 
 	const_def
 	const COMPOSER_NONE                          ; 00
@@ -65,3 +67,12 @@ NUM_MP_EDIT_FIELDS EQU const_value
 	const COMPOSER_GRONNOC                       ; 15
 	const COMPOSER_CAT333POKEMON                 ; 16
 	const COMPOSER_NOTFROGGESTSPIRIT             ; 17
+	const COMPOSER_CARSONBUSH
+	const COMPOSER_WHITESTRIPES
+	const COMPOSER_THOUS_FT_KRUTCH
+	const COMPOSER_RAY_PARKER
+	const COMPOSER_NEPH
+	const COMPOSER_GUNS_N_ROSES
+	const COMPOSER_PILOT
+	const COMPOSER_SUZUKI_TANAKA
+

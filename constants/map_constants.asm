@@ -567,17 +567,18 @@ MAP_NONE   EQU 0
 	mapconst SILPH_CO_1F,                                 4,  8 ;  7
 	mapconst SILPH_CO_2F,                                 4,  8 ;  8
 	mapconst SILPH_CO_3F,                                 4,  8 ;  9
-	mapconst COPYCATS_HOUSE_1F,                           4,  4 ; 10
-	mapconst COPYCATS_HOUSE_2F,                           3,  4 ; 11
-	mapconst ROUTE_5,                                    17, 10 ; 12
-	mapconst ROUTE_5_UNDERGROUND_ENTRANCE,                4,  4 ; 13
-	mapconst ROUTE_5_SAFFRON_CITY_GATE,                   4,  5 ; 14
-	mapconst ROUTE_5_CLEANSE_TAG_SPEECH_HOUSE,            4,  4 ; 15
-	mapconst POKEMON_TRAINER_FAN_CLUB,                    5,  4 ; 16
-	mapconst SAFFRON_HITMONTOP_KID_HOUSE,                 4,  4 ; 17
-	mapconst SAFFRON_BOOK_SPEECH_HOUSE,                   4,  4 ; 18
-	mapconst SAFFRON_ORRE_SPEECH_HOUSE,                   4,  4 ; 19
-	mapconst SAFFRON_RICH_SPEECH_HOUSE,                   4,  4 ; 20
+	mapconst SAFFRON_STAKE_CENTER,                         6,  8 ; 10
+	mapconst COPYCATS_HOUSE_1F,                           4,  4 ; 11
+	mapconst COPYCATS_HOUSE_2F,                           3,  4 ; 12
+	mapconst ROUTE_5,                                    17, 10 ; 13
+	mapconst ROUTE_5_UNDERGROUND_ENTRANCE,                4,  4 ; 14
+	mapconst ROUTE_5_SAFFRON_CITY_GATE,                   4,  5 ; 15
+	mapconst ROUTE_5_CLEANSE_TAG_SPEECH_HOUSE,            4,  4 ; 16
+	mapconst POKEMON_TRAINER_FAN_CLUB,                    5,  4 ; 17
+	mapconst SAFFRON_HITMONTOP_KID_HOUSE,                 4,  4 ; 18
+	mapconst SAFFRON_BOOK_SPEECH_HOUSE,                   4,  4 ; 19
+	mapconst SAFFRON_ORRE_SPEECH_HOUSE,                   4,  4 ; 20
+	mapconst SAFFRON_RICH_SPEECH_HOUSE,                   4,  4 ; 21
 
 	newgroup                                                    ; 26
 

@@ -657,7 +657,7 @@ ProfElmSpeech: ; 0x5f99
 	call RotateFourPalettesLeft
 	call ClearTileMap
 
-	ld de, MUSIC_ROUTE_30
+	ld de, MUSIC_UNTRAVELED_ROAD
 	call PlayMusic
 
 	call RotateFourPalettesRight
@@ -1346,16 +1346,19 @@ Copyright: ; 63e2
 
 CopyrightString: ; 63fd
 	; ©1995-2001 Nintendo
-	db   $60, $61, $62, $63, $64, $65, $66
-	db   $67, $68, $69, $6a, $6b, $6c
+	db   $60, $61, $61, $62, $63
+	db   $60, $61, $61, $62, $63
+	db   $60, $61, $61, $62
 
 	; ©1995-2001 Creatures inc.
-	next $60, $61, $62, $63, $64, $65, $66
-	db   $6d, $6e, $6f, $70, $71, $72, $7a, $7b, $7c
+	next $60, $61, $61, $62, $63
+	db   $60, $61, $61, $62, $63
+	db   $60, $61, $61, $62
 
 	; ©1995-2001 GAME FREAK inc.
-	next $60, $61, $62, $63, $64, $65, $66
-	db   $73, $74, $75, $76, $77, $78, $79, $7a, $7b, $7c
+	next $60, $61, $61, $62, $63
+	db   $60, $61, $61, $62, $63
+	db   $60, $61, $61, $62
 
 	db "@"
 ; 642e

@@ -163,8 +163,8 @@ PlaceGameFreakPresents_1: ; e468d
 ; e46af
 
 .GAME_FREAK:
-	;  G  A  M  E   _  F  R  E  A  K
-	db 0, 1, 2, 3, 13, 4, 5, 3, 1, 6
+	;   _  G  O  T   _   _  '  E  M   _
+	db 13, 0, 1, 2, 13, 5, 3, 4, 13, 13
 .end
 	db "@"
 ; e46ba
@@ -187,7 +187,8 @@ PlaceGameFreakPresents_2: ; e46ba
 ; e46d6
 
 .presents
-	db 7, 8, 9, 10, 11, 12
+	;   _   _  Y  E ET   _
+	db 13, 13, 7, 8, 9, 13
 .end
 	db "@"
 ; e46dd
@@ -530,6 +531,8 @@ IntroScene1: ; e495b (39:495b)
 
 IntroScene2: ; e49d6 (39:49d6)
 ; First Unown (A) fades in, pulses, then fades out.
+	ld de, MUSIC_CRYSTAL_OPENING
+	call PlayMusic
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
@@ -655,8 +658,8 @@ IntroScene6: ; e4af7 (39:4af7)
 	push af
 	depixel 7, 15
 	call CrystalIntro_InitUnownAnim
-	ld de, SFX_INTRO_UNOWN_2
-	call PlaySFX
+	;ld de, SFX_INTRO_UNOWN_2
+	;call PlaySFX
 	pop af
 .NoUnown:
 	ld [wcf65], a
@@ -667,8 +670,8 @@ IntroScene6: ; e4af7 (39:4af7)
 	push af
 	depixel 14, 6
 	call CrystalIntro_InitUnownAnim
-	ld de, SFX_INTRO_UNOWN_1
-	call PlaySFX
+	;ld de, SFX_INTRO_UNOWN_1
+	;call PlaySFX
 	pop af
 .StopUnown:
 	ld [wcf65], a
@@ -952,8 +955,8 @@ IntroScene13: ; e4d6d (39:4d6d)
 	depixel 13, 11, 4, 0
 	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE
 	call _InitSpriteAnimStruct
-	ld de, MUSIC_CRYSTAL_OPENING
-	call PlayMusic
+	;ld de, MUSIC_CRYSTAL_OPENING
+	;call PlayMusic
 	xor a
 	ld [wGlobalAnimXOffset], a
 	call Intro_SetCGBPalUpdate
@@ -2796,9 +2799,9 @@ INCBIN "gfx/intro/unown_back.2bpp.lz"
 ; e799d
 
 IntroGrass1GFX: ; e799d
-INCBIN "gfx/intro/grass1.2bpp"
+;INCBIN "gfx/intro/grass1.2bpp"
 IntroGrass2GFX: ; e79dd
-INCBIN "gfx/intro/grass2.2bpp"
+;INCBIN "gfx/intro/grass2.2bpp"
 IntroGrass3GFX: ; e7a1d
 INCBIN "gfx/intro/grass3.2bpp"
 IntroGrass4GFX: ; e7a5d

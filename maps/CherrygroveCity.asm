@@ -1,6 +1,6 @@
 CherrygroveCity_MapScriptHeader:
 	db 0 ; scene scripts
-
+	
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, CherrygroveCityFlyPoint
 
@@ -11,26 +11,62 @@ CherrygroveCity_MapScriptHeader:
 	warp_event 25,  9, GUIDE_GENTS_HOUSE, 1
 	warp_event 31, 11, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 
-	db 3 ; coord events
+	db 9 ; coord events
 	coord_event 33,  7, 0, CherrygroveGuideGentTrigger
 	coord_event 33,  6, 1, CherrygroveSilverTriggerNorth
 	coord_event 33,  7, 1, CherrygroveSilverTriggerSouth
+	coord_event 23,  6, 2, CherrygroveMissionaryTrigger1
+	coord_event 23,  5, 2, CherrygroveMissionaryTrigger2
+	coord_event 23,  4, 2, CherrygroveMissionaryTrigger3
+	coord_event 22,  6, 2, CherrygroveMissionaryTrigger4
+	coord_event 22,  5, 2, CherrygroveMissionaryTrigger5
+	coord_event 22,  4, 2, CherrygroveMissionaryTrigger6
 
 	db 2 ; bg events
 	bg_event 30,  8, SIGNPOST_JUMPTEXT, CherrygroveCitySignText
 	bg_event 23,  9, SIGNPOST_JUMPTEXT, GuideGentsHouseSignText
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 32,  6, SPRITE_GUIDE_GENT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	object_event 39,  6, SPRITE_CHERRYGROVE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
+	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, PERSONTYPE_SCRIPT, 0, CherrygroveMissionary1Script, -1
+	object_event 22,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, PAL_NPC_BLUE, PERSONTYPE_SCRIPT, 0, CherrygroveMissionary2Script, -1
 	object_event 25, 13, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, PERSONTYPE_COMMAND, jumptextfaceplayer, CherrygroveTeacherText_HaveMapCard, -1
-	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_SCRIPT, 0, MysticWaterGuy, -1
 	object_event 26, 13, SPRITE_PIDGEY, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, PERSONTYPE_POKEMON, PIDGEY, CherrygrovePidgeyText, -1
 
 	const_def 1 ; object constants
 	const CHERRYGROVECITY_GRAMPS
 	const CHERRYGROVECITY_SILVER
+	const CHERRYGROVECITY_MISSIONARY_1
+	const CHERRYGROVECITY_MISSIONARY_2
+
+CherrygroveMissionaryTrigger1:
+	setscene $3
+	jump CherrygroveMissionary1Script
+CherrygroveMissionaryTrigger2:
+	setscene $3
+	applymovement CHERRYGROVECITY_MISSIONARY_1, MissionaryUp1
+	applymovement CHERRYGROVECITY_MISSIONARY_2, MissionaryUp1
+	jump CherrygroveMissionary1Script
+CherrygroveMissionaryTrigger3:
+	setscene $3
+	applymovement CHERRYGROVECITY_MISSIONARY_1, MissionaryUp2
+	applymovement CHERRYGROVECITY_MISSIONARY_2, MissionaryUp2
+	jump CherrygroveMissionary1Script
+CherrygroveMissionaryTrigger4:
+	setscene $3
+	jump CherrygroveMissionary1Script
+CherrygroveMissionaryTrigger5:
+	setscene $3
+	applymovement CHERRYGROVECITY_MISSIONARY_1, MissionaryUp1
+	applymovement CHERRYGROVECITY_MISSIONARY_2, MissionaryUp1
+	jump CherrygroveMissionary1Script
+CherrygroveMissionaryTrigger6:
+	setscene $3
+	applymovement CHERRYGROVECITY_MISSIONARY_1, MissionaryUp2
+	applymovement CHERRYGROVECITY_MISSIONARY_2, MissionaryUp2
+	jump CherrygroveMissionary1Script
 
 CherrygroveCityFlyPoint:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
@@ -41,7 +77,7 @@ CherrygroveGuideGentTrigger:
 	setlasttalked CHERRYGROVECITY_GRAMPS
 CherrygroveCityGuideGent:
 	showtextfaceplayer GuideGentIntroText
-	playmusic MUSIC_SHOW_ME_AROUND
+	playmusic MUSIC_MAGIC
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
 	showtext GuideGentPokeCenterText
@@ -177,7 +213,16 @@ MysticWaterGuyTextAfter:
 	text "Back to fishing"
 	line "for me, then."
 	done
-
+	
+MissionaryUp1:
+	step_up
+	step_end
+	
+MissionaryUp2:
+	step_up
+	step_up
+	step_end
+	
 GuideGentPlayerMovement:
 	step_left
 	turn_head_up
@@ -454,3 +499,34 @@ CherrygroveCitySignText:
 GuideGentsHouseSignText:
 	text "Guide Gent's House"
 	done
+
+MissionariesCherryText:
+	text "Hi there! We're"
+	line "Missionaries for"
+	
+	para "the Church of"
+	line "Jesus Christ of"
+	cont "Latter-day saints!"
+	
+	done
+	
+CherrygroveMissionary1Script:
+	playmusic MUSIC_BRING_HIS_TRUTH
+	showtextfaceplayer MissionariesCherryText
+	winlosstext MissionariesCherryText, MissionariesCherryText
+	setlasttalked CHERRYGROVECITY_MISSIONARY_1
+	loadtrainer YOUNGSTER, RICKS
+	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	special HealPartyEvenForNuzlocke
+	playmusic MUSIC_CHERRYGROVE_CITY
+	end
+	
+CherrygroveMissionary2Script:
+	setlasttalked CHERRYGROVECITY_MISSIONARY_2
+	jump CherrygroveMissionary1Script
+	
+
+

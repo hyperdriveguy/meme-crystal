@@ -30,7 +30,7 @@ TrainerEncounterMusic: ; e9027
 	db MUSIC_RIVAL_ENCOUNTER		; rival2
 	db MUSIC_LYRA_ENCOUNTER_HGSS	; lyra1
 	db MUSIC_LYRA_ENCOUNTER_HGSS	; lyra2
-	db MUSIC_YOUNGSTER_ENCOUNTER	; youngster
+	db MUSIC_BRING_HIS_TRUTH     	; youngster
 	db MUSIC_YOUNGSTER_ENCOUNTER	; bug_catcher
 	db MUSIC_YOUNGSTER_ENCOUNTER	; camper
 	db MUSIC_LASS_ENCOUNTER			; picnicker
@@ -67,7 +67,7 @@ TrainerEncounterMusic: ; e9027
 	db MUSIC_HIKER_ENCOUNTER		; gentleman
 	db MUSIC_YOUNGSTER_ENCOUNTER	; rich_boy
 	db MUSIC_BEAUTY_ENCOUNTER		; lady
-	db MUSIC_LASS_ENCOUNTER			; breeder
+	db MUSIC_NONE        			; breeder
 	db MUSIC_LASS_ENCOUNTER			; baker
 	db MUSIC_LASS_ENCOUNTER			; cowgirl
 	db MUSIC_HIKER_ENCOUNTER		; sailor

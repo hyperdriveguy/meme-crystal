@@ -1478,3 +1478,6 @@ Route48_BlockData:
 
 Route49_BlockData:
 	INCBIN "maps/Route49.blk"
+	
+SaffronStakeCenter_BlockData:
+	INCBIN "maps/SaffronStakeCenter.blk"

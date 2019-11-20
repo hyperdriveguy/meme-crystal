@@ -672,7 +672,7 @@ NonTrainerCallerNames: ; 903d6
 	dw .buena
 
 .none db "@"
-.mom db "Mom:@"
+.mom db "Ghostbusters:@"
 .bill db "Bill:<LNBRK>   #maniac@"
 .elm db "Prof.Elm:<LNBRK>   #mon Prof.@"
 .bikeshop db "Miracle Cycle:@"

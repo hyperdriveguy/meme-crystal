@@ -2132,19 +2132,19 @@ Music_TrainerBattleBW_Ch4:
 	note D#, 2
 	note C_, 2
 	note D#, 4
+	note D#, 4;LOW
 	note D#, 4
-	note D#, 4
+	note D#, 2
+	note C_, 2;HIGH
 	note D#, 2
 	note C_, 2
 	note D#, 2
 	note C_, 2
-	note D#, 2
-	note C_, 2
 	note C_, 1
 	note C_, 1
 	note C_, 1
 	note C_, 1
-	note B_, 4
+	note B_, 4;CYMBAL
 	note D#, 4
 	notetype $7
 	note D#, 3
